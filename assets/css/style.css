@@ -1,13 +1,235 @@
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+/* IMPORT FONT FAMILY*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Raleway:wght@100&display=swap');
+/*ROOT*/
+:root {
+  --color_primary-dark : #06668C;
+  --color_primary-light : #427AA1;
+    --color_secondary-dark : #3d793b; 
+    --color_secondary-light:  #7d8549;
+    --color__font-light : #ffff;
+    --color__font-title : #117917;
+    --color_black : #333;
+    
+    --font_title : 'EB Garamond', serif;
+    --font_text : 'Raleway', sans-serif;
+
 }
+
+/*RESET*/
+*, p, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
+}
+
+
+
+/* COMMON*/
+
 
 html {
-    font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-body{
-    font-size: 1.6rem;
+h1 {
+  font-family: var(--font_title);
+  font-weight: 700;
+  font-size: clamp(14px, 3vw + 1rem, 3rem);
+  color:var(--color__font-title);
+}
+
+.d-flex-center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NAVBAR */
+
+header{
+  position:relative;
+}
+
+
+nav{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  
+ background: var( --color_primary-dark);
+ color: var(--color__font-light);
+ padding:1rem;
+}
+
+.nav__link {
+  font-size: clamp(12px, 2vw + 0.5rem, 20px);
+}
+
+/* TOGGLE BTN*/
+.nav__toggle{
+  position:relative;
+  width:2rem;
+  height:1.5rem;
+  cursor: pointer;
+  
+}
+.bar {
+  display: block;
+  position:absolute;
+  left:0;
+  width:100%;
+  height:3px;
+  background: var(--color__font-light);
+  border-radius:5px;
+  pointer-events: none;
+  opacity: 1;
+  transition: transform 0.2s ease-in-out, 
+              opacity 0.2s  ease-in-out;
+}
+
+.bar1 {
+  top:0px;
+}
+.bar2{
+  top:40%;
+}
+.bar3 {
+top:85%;
+}
+
+nav.active .nav__toggle .bar1{
+  transform:  translateY(10px) rotate(-45deg);
+  z-index:2;
+}
+
+nav.active .nav__toggle .bar2{
+  opacity: 0;
+}
+
+nav.active .nav__toggle .bar3{
+  transform:  translateY(-10px) rotate(45deg);
+  z-index:4;
+}
+
+/* LIST MENU */
+header nav ul{
+  display: none;
+}
+
+.nav__link {
+ color:var(--color__font-light);
+ 
+}
+
+header nav.active ul {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:2rem;
+  position:absolute;
+  height:100vh;
+  width:100vw;
+  top:100%;
+  left:0;
+  padding-top:3rem;
+  background: var(--color_primary-light);
+
+}
+
+
+
+/* SECTION 1 */
+.main__section {
+  background-image: url("/assets/img/bg_image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter:grayscale(60%);
+
+  height:calc(100vh - 56px );
+}
+
+.main__section .block__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100%;
+}
+
+.main__section .content__text  {
+  padding-top:4rem;
+  flex:1 0 auto;
+}
+
+.main__section p {
+ 
+  color:var(--color__font-title);
+  font-family: var(--font_text);
+  font-weight: 700;
+  word-spacing: 0.2rem;
+}
+
+
+.main__section .block__icon{
+  text-align: center;
+  justify-self: flex-end;
+  font-size: 2rem;
+  
+}
+
+.fa-circle-down{
+  color:var(--color_primary-light);
+  cursor:pointer;
+}
+
+
+
+
+/* SECTION 2*/
+.block {
+  padding:3rem;
+}
+
+.block__action{
+  background: linear-gradient(to left, var(--color_primary-dark) 90%, var(--color_primary-light));
+}
+.block__list-item{
+  flex-direction: column;
+}
+.block__content{
+  padding:2rem;
+  text-align: center;
+}
+.block--border {
+  box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+  border-radius:5px;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (min-width:576px) {
+  
+   
+
+    .nav__toggle {
+      display: none;
+    }
+
+    header nav ul{
+      display: flex;
+      justify-content: space-between;
+      gap:2rem;
+    }
+    
 }
