@@ -65,15 +65,15 @@ nav{
   display:flex;
   align-items: center;
   justify-content: space-between;
-  
- background: var( --color_primary-dark);
- color: var(--color__font-light);
- padding:1rem;
+  background: var( --color_primary-dark);
+  color: var(--color__font-light);
+  padding:1rem;
 }
 
 .nav__link {
   font-size: clamp(12px, 2vw + 0.5rem, 20px);
 }
+
 
 /* TOGGLE BTN*/
 .nav__toggle{
@@ -121,15 +121,43 @@ nav.active .nav__toggle .bar3{
   z-index:4;
 }
 
+
+/* MENU ACTIVE*/
+.overlay {
+  transition: background 0.2s ease;
+}
+
+.overlay.show {
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background: #333;
+z-index:10;
+}
+
+header nav.active .nav__list.show{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height:40vh;
+  width:100%;
+  background: transparent;
+  z-index: 20;
+}
+
+
 /* LIST MENU */
 header nav ul{
   display: none;
 }
 
 .nav__link {
- color:var(--color__font-light);
- 
+  color:var(--color__font-light);
 }
+
 
 header nav.active ul {
   display:flex;
@@ -143,8 +171,13 @@ header nav.active ul {
   left:0;
   padding-top:3rem;
   background: var(--color_primary-light);
-
+  
 }
+
+main{
+  position:relative;
+}
+
 
 
 
