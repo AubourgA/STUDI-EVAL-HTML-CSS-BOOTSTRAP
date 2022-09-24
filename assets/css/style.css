@@ -1,5 +1,6 @@
 /* IMPORT FONT FAMILY*/
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Raleway:wght@100&family=Nanum+Gothic&family=Ubuntu&display=swap');
+
 /*ROOT*/
 :root {
   --color_primary-dark : #06668C;
@@ -10,13 +11,18 @@
     --color__font-title : #117917;
     --color_black : #333;
     
+    --color-heart:rgba(255, 0, 0, 0.788);
+    --color-hand:rgba(224, 208, 63, 0.774);
+    --color-teacher:rgba(0, 128, 0, 0.719);
     --font_title : 'EB Garamond', serif;
+    --font_title--secondary : 'Nanum Gothic', sans-serif;
+    --font_title--ter :'Ubuntu', sans-serif;
     --font_text : 'Raleway', sans-serif;
 
 }
 
 /*RESET*/
-*, p, ul {
+*, p, ul, form {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,6 +45,7 @@ ul {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -47,6 +54,19 @@ h1 {
   font-size: clamp(14px, 3vw + 1rem, 3rem);
   color:var(--color__font-title);
 }
+
+.title__h2 {
+  font-family:  var(--font_title--secondary);
+  font-size: 1.8rem;
+  font-weight: bold;
+ }
+
+.title__h3 {
+ font-family: var(--font_title--ter);
+ font-weight: 500;
+ color:var(--color__font-light);
+}
+
 
 .d-flex-center{
   display:flex;
@@ -233,8 +253,14 @@ main{
   padding:3rem;
 }
 
+
 .block__action{
-  background: linear-gradient(to left, var(--color_primary-dark) 90%, var(--color_primary-light));
+  background:rgba(54, 133, 223, 0.2);
+}
+
+.block__list {
+  margin: 3rem 0 4rem;
+  row-gap: 2rem;
 }
 .block__list-item{
   flex-direction: column;
@@ -248,7 +274,138 @@ main{
   border-radius:5px;
 }
 
+.list__logo {
+  font-size: 3rem;
+}
 
+.fa-heart {
+  color:var(--color-heart);
+}
+
+.fa-hand-holding-dollar {
+  color: var(--color-hand)
+}
+
+.fa-graduation-cap {
+  color :var(--color-teacher);
+}
+
+.link {
+  color:var(--color_primary-dark);
+}
+
+.link__cta {
+  padding:0.5rem;
+  border:1px solid var(--color_primary-dark);
+  border-radius: 5px;
+ 
+}
+
+/* SECTION 3*/
+.block__news {
+  margin:2rem 0;
+}
+
+.wrapper__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ gap:1.5rem;
+}
+.card__item {
+  width: calc(100% / 3 - 30px);
+  min-width: 250px;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.7);
+  border-radius:2px;
+}
+
+.card__pic {
+  position:relative;
+  width:100%;
+  height:150px;
+}
+
+.card__pic img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__pic .card__pic__info {
+  position:absolute;
+  display:block;
+  width:100%;
+  bottom:0;
+  left:0px;
+  background:rgba(0, 0, 0, 0.505);
+  color:var(--color__font-light);
+  text-align: left;
+  font-size: 0.7rem;
+  padding-left:5px;
+}
+.card__content {
+  display:flex;
+  flex-direction: column;
+  padding:1.5rem;
+  height:auto;
+
+}
+
+.card__content p {
+  flex-grow:1;
+  padding:1rem 0;
+}
+
+.card__content .btn {
+width:50%;
+margin:0 auto;
+border:1px solid var(--color_primary-dark);
+color: var(--color_primary-dark);
+}
+/* FOOTER */
+footer {
+  
+  background: var(--color_primary-dark);
+ position:relative;
+  padding:1rem 0 5rem;
+}
+
+/* SVG */
+.custom-shape-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotate(180deg);
+  z-index:1;
+}
+
+.custom-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 77px;
+}
+
+.custom-shape-divider .shape-fill {
+  fill: #FFFFFF;
+}
+
+.footer__list {
+  padding-top:5rem;
+  height: 100%;
+  text-align: center;
+}
+
+
+.footer__list__sublist span {
+  font-weight: bold;
+}
+
+.social__link {
+  color:inherit
+}
 /* MEDIA QUERY */
 
 @media screen and (min-width:576px) {

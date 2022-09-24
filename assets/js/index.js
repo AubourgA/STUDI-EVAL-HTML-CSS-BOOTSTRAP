@@ -16,5 +16,18 @@ window.addEventListener('DOMContentLoaded', ()=> {
     })
 
 
+    /*link menu - remove overlay+menu */
+    const  menuLink = document.querySelectorAll('.nav__link');
+
+    menuLink.forEach( item => {
+        item.addEventListener('click', ()=> {
+            if(navBar.classList.contains('active')) {
+                navBar.classList.remove('active');
+                overlay.classList.remove('show');
+                menu.classList.remove('show');
+            }
+        })
+    })
+
 })
 
