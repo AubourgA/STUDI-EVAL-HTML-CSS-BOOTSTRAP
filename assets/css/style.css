@@ -509,6 +509,49 @@ footer {
   color:inherit
 }
 
+/***********************/
+/* SECTION MAIN ACTION*/
+/***********************/
+.icon_heart::before {
+  content:'\f004';
+  font-family: "Font Awesome 6 Free";
+  padding-right: 1rem;
+  color: var(--color-heart);
+}
+
+.icon_money::before {
+  content:'\f4c0';
+  font-family: "Font Awesome 6 Free";
+  padding-right: 1rem;
+  color: var(--color-hand);
+}
+
+.icon_teacher::before {
+  content:'\f19d';
+  font-family: "Font Awesome 6 Free";
+  padding-right: 1rem;
+  color: var(--color-teacher);
+}
+
+.article__wrapper {
+  padding: 5px 0;
+}
+
+.paragraph {
+  font-family: var(--font_text);
+  font-weight: 700;
+  text-align: justify;
+  line-height: 1.8rem;
+  color: var(--color__black);
+}
+.action__pic {
+  width:90wh;
+}
+
+.action__pic img {
+  width:100%;
+}
+
 /****************/
 /* MEDIA QUERY */
 /***************/
