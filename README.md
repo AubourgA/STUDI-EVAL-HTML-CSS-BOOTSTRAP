@@ -1,6 +1,16 @@
-# initProjet_Front
-Reset html et css
+# projet entrainement HTML/CSS/BOOTSTRAP
 
-# Structure de base
+Réaliser une interface utilisateur web statique et adaptable
 
-Pour commencer un nouveau projet HTML/CSS/JS
+# Theme 
+
+Un client (ici association) souhaite avoir un site qui le présente et mette en avant ses événements
+ 
+
+
+
+
+
+
+
+

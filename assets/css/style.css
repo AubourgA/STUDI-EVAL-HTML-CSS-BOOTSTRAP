@@ -512,6 +512,24 @@ footer {
 /***********************/
 /* SECTION MAIN ACTION*/
 /***********************/
+
+.event {
+  border:1px solid rgba(240, 188, 20);
+  border-left:5px solid rgb(240, 188, 20);
+  margin: 2.5rem 70px 0;
+  padding:15px 0 15px 25px;
+  background: rgba(240, 189, 20, 0.363);
+
+}
+.event__text {
+  border:1px solid var(--color_secondary-light);
+  background-color: var(--color_secondary-light);
+  border-radius: 25px;
+  padding:8px 7px;
+  font-size: 0.8rem;
+  color:var(--color__font-light)
+}
+
 .icon_heart::before {
   content:'\f004';
   font-family: "Font Awesome 6 Free";
@@ -551,6 +569,8 @@ footer {
 .action__pic img {
   width:100%;
 }
+
+
 
 /****************/
 /* MEDIA QUERY */
