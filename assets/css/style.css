@@ -43,8 +43,6 @@ ul {
 
 
 /* COMMON*/
-
-
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -90,7 +88,6 @@ h1 {
 header{
   position:relative;
 }
-
 
 nav{
   display:flex;
